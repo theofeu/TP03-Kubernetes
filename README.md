@@ -192,3 +192,15 @@ Nous pouvons ensuite déployer notre propre chart :
 ```sh
 helm install srv-test chart01/chart01
 ```
+Si nous voulons effectuer des modifications sur notre chart il faudra repackager la chart en lui donnant une nouvelle version
+```sh
+helm package chart01/ --version 0.2.0
+```
+On regénère l'index avec la nouvelle version
+```sh
+helm repo index . --url https://theofeu.github.io/TP03-Kubernetes/
+```
+Puis on update le repo
+```sh
+helm repo update
+```
