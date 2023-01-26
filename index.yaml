@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  chart01:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-01-26T16:42:05.11516805+01:00"
+    description: A Helm chart for Kubernetes
+    digest: fa80ec04f9e467af0dda02080d02f620688676625122512dfbac13a1899df2a8
+    name: chart01
+    type: application
+    urls:
+    - https://theofeu.github.io/TP03-Kubernetes/chart01-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-01-26T16:42:05.112754229+01:00"

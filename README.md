@@ -166,3 +166,29 @@ helm upgrade -f values-prod.yml -n production srv-prod ../chart01
 helm upgrade -f values-dev.yml -n developpement srv-dev ../chart01
 ```
 ## IV- Repo Helm
+Je vais dans un premier temps créer une branche sur mon git
+```sh
+git checkout -b gh-pages
+git push --set-upstream origin gh-pages
+```
+Je vais ensuite sur github dans les paramètres de mon repo afin de créer un github pages sur ma branch précédement créé. 
+Ensuite, je package mon chart
+```sh
+helm package chart01/
+```
+On va ensuite générer le fichier index file à l'aide de cette commande :
+```sh
+helm repo index . --url https://theofeu.github.io/TP03-Kubernetes/
+```
+Puis on va pouvoir récupèrer notre repo :
+```sh
+helm repo add chart01 https://theofeu.github.io/TP03-Kubernetes/
+```
+Vous pouvez voir votre repo comme ceci :
+```sh
+helm repo list
+```
+Nous pouvons ensuite déployer notre propre chart :
+```sh
+helm install srv-test chart01/chart01
+```
