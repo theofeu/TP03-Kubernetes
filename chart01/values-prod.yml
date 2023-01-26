@@ -1,0 +1,13 @@
+image:
+  tag: 1.22
+ingress:
+  hosts:
+    - host: srv-prod.test
+      paths:
+        - path: "/"
+          pathType: Prefix
+  enabled: true
+index: |
+  <html>
+  <h1>Yo Prod</h1>
+  </html>

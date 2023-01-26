@@ -1,0 +1,13 @@
+image: 
+  tag: 1.23
+ingress:
+  hosts:
+    - host: srv-dev.test
+      paths:
+        - path: "/"
+          pathType: Prefix
+  enabled: true
+index: |
+  <html>
+  <h1>Yo Dev</h1>
+  </html>
